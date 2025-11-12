@@ -1,31 +1,31 @@
 package trivy.policy
 
-deny[msg] if {
+deny[msg] {
 	some r in input.Results
 	some v in r.Vulnerabilities
 	v.Severity == "CRITICAL"
 	msg := sprintf("❌ Critical vulnerability found: %s (%s)", [v.VulnerabilityID, v.PkgName])
 }
 
-deny[msg] if {
+deny[msg] {
 	some r in input.Results
 	some v in r.Vulnerabilities
 	v.Severity == "HIGH"
 	msg := sprintf("⚠️ High vulnerability found: %s (%s)", [v.VulnerabilityID, v.PkgName])
 }
 
-deny[msg] if {
+deny[msg] {
 	some r in input.Results
 	some v in r.Vulnerabilities
 	v.Severity == "MEDIUM"
 	msg := sprintf("‼️ Medium vulnerability found: %s (%s)", [v.VulnerabilityID, v.PkgName])
 }
 
-deny[msg] if {
+deny[msg] {
 	some r in input.Results
-    some v in r.Vulnerabilities
-    v.Severity == "LOW"
-    msg := sprintf("🔻 LOW vulnerability found: %s (%s)", [v.VulnerabilityID, v.PkgName])
+  some v in r.Vulnerabilities
+  v.Severity == "LOW"
+  msg := sprintf("🔻 LOW vulnerability found: %s (%s)", [v.VulnerabilityID, v.PkgName])
 }
 
 
