@@ -1,38 +1,40 @@
 package trivy.policy
 
-deny contains msg if {
-	some r in input.Results
-	some v in r.Vulnerabilities
-	v.Severity == "CRITICAL"
-	msg := sprintf("❌ Critical vulnerability found: %s (%s)", [v.VulnerabilityID, v.PkgName])
+max_critical := 0
+max_high := 0
+max_medium := 1
+max_low := 5
+
+vulnerabilities := [v | result := input.Results[_]; v := result.Vulnerabilities[_]]
+
+count_severities := {
+	"CRITICAL": count([v | v := vulnerabilities[_]; v.Severity == "CRITICAL"]),
+  "HIGH":     count([v | v := vulnerabilities[_]; v.Severity == "HIGH"]),
+  "MEDIUM":   count([v | v := vulnerabilities[_]; v.Severity == "MEDIUM"]),
+  "LOW":      count([v | v := vulnerabilities[_]; v.Severity == "LOW"])
 }
 
 deny contains msg if {
-	some r in input.Results
-	some v in r.Vulnerabilities
-	v.Severity == "HIGH"
-	msg := sprintf("⚠️ High vulnerability found: %s (%s)", [v.VulnerabilityID, v.PkgName])
+	count_severities["CRITICAL"] > max_critical
+	msg := sprintf("❌ Too many CRITICAL vulnerabilities: %d (allowed: %d)", [count_severities["CRITICAL"], max_critical])
+}
+
+deny contains msg if {
+	count_severities["HIGH"] > max_high
+	msg := sprintf("⚠️ Too many HIGH vulnerabilities: %d (allowed: %d)", [count_severities["HIGH"], max_high])
 }
 
 warn contains msg if {
-	some r in input.Results
-	some v in r.Vulnerabilities
-	v.Severity == "MEDIUM"
-	msg := sprintf("‼️ Medium vulnerability found: %s (%s)", [v.VulnerabilityID, v.PkgName])
+	count_severities["MEDIUM"] > max_medium
+	msg := sprintf("‼️ Too many MEDIUM vulnerabilities: %d (allowed: %d)", [count_severities["MEDIUM"], max_medium])
 }
 
 warn contains msg if {
-	some r in input.Results
-    some v in r.Vulnerabilities
-    v.Severity == "LOW"
-    msg := sprintf("🔻 LOW vulnerability found: %s (%s)", [v.VulnerabilityID, v.PkgName])
+	count_severities["LOW"] > max_low
+  msg := sprintf("🔻 Too many LOW vulnerabilities: %d (allowed: %d)", [count_severities["LOW"], max_low])
 }
 
-
-summary := {
-	"total": count([v | some r in input.Results; v := r.Vulnerabilities[_]]),
-	"critical": count([v | some r in input.Results; v := r.Vulnerabilities[_]; v.Severity == "CRITICAL"]),
-	"high": count([v | some r in input.Results; v := r.Vulnerabilities[_]; v.Severity == "HIGH"]),
-	"medium": count([v | some r in input.Results; v := r.Vulnerabilities[_]; v.Severity == "MEDIUM"]),
-	"low": count([v | some r in input.Results; v := r.Vulnerabilities[_]; v.Severity == "LOW"]),
+warn contains msg if {
+  msg := sprintf("✅ Vulnerability summary: CRITICAL=%d, HIGH=%d, MEDIUM=%d, LOW=%d",
+    [count_severities["CRITICAL"], count_severities["HIGH"], count_severities["MEDIUM"], count_severities["LOW"]])
 }
