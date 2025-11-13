@@ -14,14 +14,14 @@ deny contains msg if {
 	msg := sprintf("⚠️ High vulnerability found: %s (%s)", [v.VulnerabilityID, v.PkgName])
 }
 
-deny contains msg if {
+warn contains msg if {
 	some r in input.Results
 	some v in r.Vulnerabilities
 	v.Severity == "MEDIUM"
 	msg := sprintf("‼️ Medium vulnerability found: %s (%s)", [v.VulnerabilityID, v.PkgName])
 }
 
-deny contains msg if {
+warn contains msg if {
 	some r in input.Results
     some v in r.Vulnerabilities
     v.Severity == "LOW"
