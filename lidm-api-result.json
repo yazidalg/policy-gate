@@ -1,0 +1,1540 @@
+{
+  "SchemaVersion": 2,
+  "CreatedAt": "2025-11-24T15:10:07.199586+07:00",
+  "ArtifactName": "lidm-api:v0.0.1",
+  "ArtifactType": "container_image",
+   "Metadata": {
+    "Size": 30454272,
+    "OS": {
+      "Family": "alpine",
+      "Name": "3.22.0"
+    },
+    "ImageID": "sha256:d14200d105bdb9bc6a3f0023a71035a2ebb1f085682a26323ad1b35330aeb783",
+    "DiffIDs": [
+      "sha256:1231a673589ac9e2f8a98ed916d1fa8301b36a44dd14fc40eba5a05905da69f1",
+      "sha256:ab8ba778294a1552c6b83c066b390debae9b1bad3f6691851e86887786447ef6",
+      "sha256:dc0cdc1169129cbabcddcac9591b75bf427948a8d57026ddb5373b8af6c80e86",
+      "sha256:f559f9ed1745f88d0b337444e45972c591b1f3a6c56a21df6a6f704d47dab195",
+      "sha256:00d367f5770aafef77ef670d8bb49772911222166a76c3b710a4405005674bc2"
+    ],
+    "RepoTags": [
+      "lidm-api:v0.0.1"
+    ],
+    "RepoDigests": [
+      "lidm-api@sha256:d14200d105bdb9bc6a3f0023a71035a2ebb1f085682a26323ad1b35330aeb783"
+    ],
+    "ImageConfig": {
+      "architecture": "arm64",
+      "created": "2025-10-19T15:23:21.811119254Z",
+      "history": [
+        {
+          "created": "2025-05-30T16:20:41Z",
+          "created_by": "ADD alpine-minirootfs-3.22.0-aarch64.tar.gz / # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-05-30T16:20:41Z",
+          "created_by": "CMD [\"/bin/sh\"]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-10-19T15:23:04Z",
+          "created_by": "RUN /bin/sh -c apk add --no-cache ca-certificates tzdata # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-10-19T15:23:04Z",
+          "created_by": "RUN /bin/sh -c addgroup -S appgroup \u0026\u0026 adduser -S appuser -G appgroup # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-10-19T15:23:04Z",
+          "created_by": "USER appuser",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-10-19T15:23:04Z",
+          "created_by": "WORKDIR /app",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-10-19T15:23:21Z",
+          "created_by": "COPY /app/main . # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-10-19T15:23:21Z",
+          "created_by": "EXPOSE map[8080/tcp:{}]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2025-10-19T15:23:21Z",
+          "created_by": "CMD [\"./main\"]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:1231a673589ac9e2f8a98ed916d1fa8301b36a44dd14fc40eba5a05905da69f1",
+          "sha256:ab8ba778294a1552c6b83c066b390debae9b1bad3f6691851e86887786447ef6",
+          "sha256:dc0cdc1169129cbabcddcac9591b75bf427948a8d57026ddb5373b8af6c80e86",
+          "sha256:f559f9ed1745f88d0b337444e45972c591b1f3a6c56a21df6a6f704d47dab195",
+          "sha256:00d367f5770aafef77ef670d8bb49772911222166a76c3b710a4405005674bc2"
+        ]
+      },
+      "config": {
+        "Cmd": [
+          "./main"
+        ],
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        ],
+        "User": "appuser",
+        "WorkingDir": "/app",
+        "ExposedPorts": {
+          "8080/tcp": {}
+        },
+        "ArgsEscaped": true
+      }
+    },
+    "Layers": [
+      {
+        "Size": 8799744,
+        "Digest": "sha256:d69d4d41cfe2ee680d6972795e2a1eb9e4dc4ec3b3c5e0797c9ab43bb3726fa7",
+        "DiffID": "sha256:1231a673589ac9e2f8a98ed916d1fa8301b36a44dd14fc40eba5a05905da69f1"
+      },
+      {
+        "Size": 1782272,
+        "Digest": "sha256:2254e9dc987f09b4d03aece0932e2828528879540a379715ba4e5570dadfb84f",
+        "DiffID": "sha256:ab8ba778294a1552c6b83c066b390debae9b1bad3f6691851e86887786447ef6"
+      },
+      {
+        "Size": 10752,
+        "Digest": "sha256:d9016a4dd235712fc8640267e78ce95d14e3cdb729800f04dfbf455b2fd8c033",
+        "DiffID": "sha256:dc0cdc1169129cbabcddcac9591b75bf427948a8d57026ddb5373b8af6c80e86"
+      },
+      {
+        "Size": 1536,
+        "Digest": "sha256:f3813f8947daf32d2c874bda0f7c033bac5bb82db89c1e47f30585018b5ca4b7",
+        "DiffID": "sha256:f559f9ed1745f88d0b337444e45972c591b1f3a6c56a21df6a6f704d47dab195"
+      },
+      {
+        "Size": 19859968,
+        "Digest": "sha256:8499c67e3163d984be4a831b28d39e0a48cb025e02da368d6e38bc547f1a6d51",
+        "DiffID": "sha256:00d367f5770aafef77ef670d8bb49772911222166a76c3b710a4405005674bc2"
+      }
+    ]
+  },
+  "Results": [
+    { 
+      "Target": "lidm-api:v0.0.1 (alpine 3.22.0)",
+      "Class": "os-pkgs",
+      "Type": "alpine",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2024-58251",
+          "PkgID": "busybox@1.37.0-r18",
+          "PkgName": "busybox",
+          "PkgIdentifier": {
+            "PURL": "pkg:apk/alpine/busybox@1.37.0-r18?arch=aarch64\u0026distro=3.22.0",
+            "UID": "f3ef20903ee358b6"
+          },
+          "InstalledVersion": "1.37.0-r18",
+          "FixedVersion": "1.37.0-r20",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:d69d4d41cfe2ee680d6972795e2a1eb9e4dc4ec3b3c5e0797c9ab43bb3726fa7",
+            "DiffID": "sha256:1231a673589ac9e2f8a98ed916d1fa8301b36a44dd14fc40eba5a05905da69f1"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-58251",
+          "DataSource": {
+            "ID": "alpine",
+            "Name": "Alpine Secdb",
+            "URL": "https://secdb.alpinelinux.org/"
+          },
+          "Title": "In netstat in BusyBox through 1.37.0, local users can launch of networ ...",
+          "Description": "In netstat in BusyBox through 1.37.0, local users can launch of network application with an argv[0] containing an ANSI terminal escape sequence, leading to a denial of service (terminal locked up) when netstat is used by a victim.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-150"
+          ],
+          "VendorSeverity": {
+            "ubuntu": 2
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/04/23/6",
+            "https://bugs.busybox.net/show_bug.cgi?id=15922",
+            "https://www.busybox.net",
+            "https://www.busybox.net/downloads/",
+            "https://www.cve.org/CVERecord?id=CVE-2024-58251"
+          ],
+          "PublishedDate": "2025-04-23T18:16:03.057Z",
+          "LastModifiedDate": "2025-04-29T13:52:47.47Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-46394",
+          "PkgID": "busybox@1.37.0-r18",
+          "PkgName": "busybox",
+          "PkgIdentifier": {
+            "PURL": "pkg:apk/alpine/busybox@1.37.0-r18?arch=aarch64\u0026distro=3.22.0",
+            "UID": "f3ef20903ee358b6"
+          },
+          "InstalledVersion": "1.37.0-r18",
+          "FixedVersion": "1.37.0-r20",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:d69d4d41cfe2ee680d6972795e2a1eb9e4dc4ec3b3c5e0797c9ab43bb3726fa7",
+            "DiffID": "sha256:1231a673589ac9e2f8a98ed916d1fa8301b36a44dd14fc40eba5a05905da69f1"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-46394",
+          "DataSource": {
+            "ID": "alpine",
+            "Name": "Alpine Secdb",
+            "URL": "https://secdb.alpinelinux.org/"
+          },
+          "Title": "In tar in BusyBox through 1.37.0, a TAR archive can have filenames hid ...",
+          "Description": "In tar in BusyBox through 1.37.0, a TAR archive can have filenames hidden from a listing through the use of terminal escape sequences.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-451"
+          ],
+          "VendorSeverity": {
+            "nvd": 1,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+              "V3Score": 3.3
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/04/23/5",
+            "http://www.openwall.com/lists/oss-security/2025/04/24/3",
+            "https://bugs.busybox.net/show_bug.cgi?id=16018",
+            "https://lists.busybox.net/pipermail/busybox/2024-July/090806.html",
+            "https://lists.busybox.net/pipermail/busybox/2024-July/090814.html",
+            "https://www.busybox.net",
+            "https://www.busybox.net/downloads/",
+            "https://www.cve.org/CVERecord?id=CVE-2025-46394",
+            "https://www.openwall.com/lists/oss-security/2025/04/23/1"
+          ],
+          "PublishedDate": "2025-04-23T16:15:48.713Z",
+          "LastModifiedDate": "2025-09-24T14:38:22.127Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2024-58251",
+          "PkgID": "busybox-binsh@1.37.0-r18",
+          "PkgName": "busybox-binsh",
+          "PkgIdentifier": {
+            "PURL": "pkg:apk/alpine/busybox-binsh@1.37.0-r18?arch=aarch64\u0026distro=3.22.0",
+            "UID": "c8f635c1f2da8062"
+          },
+          "InstalledVersion": "1.37.0-r18",
+          "FixedVersion": "1.37.0-r20",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:d69d4d41cfe2ee680d6972795e2a1eb9e4dc4ec3b3c5e0797c9ab43bb3726fa7",
+            "DiffID": "sha256:1231a673589ac9e2f8a98ed916d1fa8301b36a44dd14fc40eba5a05905da69f1"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-58251",
+          "DataSource": {
+            "ID": "alpine",
+            "Name": "Alpine Secdb",
+            "URL": "https://secdb.alpinelinux.org/"
+          },
+          "Title": "In netstat in BusyBox through 1.37.0, local users can launch of networ ...",
+          "Description": "In netstat in BusyBox through 1.37.0, local users can launch of network application with an argv[0] containing an ANSI terminal escape sequence, leading to a denial of service (terminal locked up) when netstat is used by a victim.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-150"
+          ],
+          "VendorSeverity": {
+            "ubuntu": 2
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/04/23/6",
+            "https://bugs.busybox.net/show_bug.cgi?id=15922",
+            "https://www.busybox.net",
+            "https://www.busybox.net/downloads/",
+            "https://www.cve.org/CVERecord?id=CVE-2024-58251"
+          ],
+          "PublishedDate": "2025-04-23T18:16:03.057Z",
+          "LastModifiedDate": "2025-04-29T13:52:47.47Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-46394",
+          "PkgID": "busybox-binsh@1.37.0-r18",
+          "PkgName": "busybox-binsh",
+          "PkgIdentifier": {
+            "PURL": "pkg:apk/alpine/busybox-binsh@1.37.0-r18?arch=aarch64\u0026distro=3.22.0",
+            "UID": "c8f635c1f2da8062"
+          },
+          "InstalledVersion": "1.37.0-r18",
+          "FixedVersion": "1.37.0-r20",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:d69d4d41cfe2ee680d6972795e2a1eb9e4dc4ec3b3c5e0797c9ab43bb3726fa7",
+            "DiffID": "sha256:1231a673589ac9e2f8a98ed916d1fa8301b36a44dd14fc40eba5a05905da69f1"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-46394",
+          "DataSource": {
+            "ID": "alpine",
+            "Name": "Alpine Secdb",
+            "URL": "https://secdb.alpinelinux.org/"
+          },
+          "Title": "In tar in BusyBox through 1.37.0, a TAR archive can have filenames hid ...",
+          "Description": "In tar in BusyBox through 1.37.0, a TAR archive can have filenames hidden from a listing through the use of terminal escape sequences.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-451"
+          ],
+          "VendorSeverity": {
+            "nvd": 1,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+              "V3Score": 3.3
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/04/23/5",
+            "http://www.openwall.com/lists/oss-security/2025/04/24/3",
+            "https://bugs.busybox.net/show_bug.cgi?id=16018",
+            "https://lists.busybox.net/pipermail/busybox/2024-July/090806.html",
+            "https://lists.busybox.net/pipermail/busybox/2024-July/090814.html",
+            "https://www.busybox.net",
+            "https://www.busybox.net/downloads/",
+            "https://www.cve.org/CVERecord?id=CVE-2025-46394",
+            "https://www.openwall.com/lists/oss-security/2025/04/23/1"
+          ],
+          "PublishedDate": "2025-04-23T16:15:48.713Z",
+          "LastModifiedDate": "2025-09-24T14:38:22.127Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-9230",
+          "PkgID": "libcrypto3@3.5.0-r0",
+          "PkgName": "libcrypto3",
+          "PkgIdentifier": {
+            "PURL": "pkg:apk/alpine/libcrypto3@3.5.0-r0?arch=aarch64\u0026distro=3.22.0",
+            "UID": "87ba5285732934d5"
+          },
+          "InstalledVersion": "3.5.0-r0",
+          "FixedVersion": "3.5.4-r0",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:d69d4d41cfe2ee680d6972795e2a1eb9e4dc4ec3b3c5e0797c9ab43bb3726fa7",
+            "DiffID": "sha256:1231a673589ac9e2f8a98ed916d1fa8301b36a44dd14fc40eba5a05905da69f1"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-9230",
+          "DataSource": {
+            "ID": "alpine",
+            "Name": "Alpine Secdb",
+            "URL": "https://secdb.alpinelinux.org/"
+          },
+          "Title": "openssl: Out-of-bounds read \u0026 write in RFC 3211 KEK Unwrap",
+          "Description": "Issue summary: An application trying to decrypt CMS messages encrypted using\npassword based encryption can trigger an out-of-bounds read and write.\n\nImpact summary: This out-of-bounds read may trigger a crash which leads to\nDenial of Service for an application. The out-of-bounds write can cause\na memory corruption which can have various consequences including\na Denial of Service or Execution of attacker-supplied code.\n\nAlthough the consequences of a successful exploit of this vulnerability\ncould be severe, the probability that the attacker would be able to\nperform it is low. Besides, password based (PWRI) encryption support in CMS\nmessages is very rarely used. For that reason the issue was assessed as\nModerate severity according to our Security Policy.\n\nThe FIPS modules in 3.5, 3.4, 3.3, 3.2, 3.1 and 3.0 are not affected by this\nissue, as the CMS implementation is outside the OpenSSL FIPS module\nboundary.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-125",
+            "CWE-787"
+          ],
+          "VendorSeverity": {
+            "amazon": 2,
+            "azure": 3,
+            "photon": 3,
+            "redhat": 2,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "V3Score": 5.6
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/09/30/5",
+            "https://access.redhat.com/security/cve/CVE-2025-9230",
+            "https://github.com/openssl/openssl/commit/5965ea5dd6960f36d8b7f74f8eac67a8eb8f2b45",
+            "https://github.com/openssl/openssl/commit/9e91358f365dee6c446dcdcdb01c04d2743fd280",
+            "https://github.com/openssl/openssl/commit/a79c4ce559c6a3a8fd4109e9f33c1185d5bf2def",
+            "https://github.com/openssl/openssl/commit/b5282d677551afda7d20e9c00e09561b547b2dfd",
+            "https://github.com/openssl/openssl/commit/bae259a211ada6315dc50900686daaaaaa55f482",
+            "https://github.openssl.org/openssl/extended-releases/commit/c2b96348bfa662f25f4fabf81958ae822063dae3",
+            "https://github.openssl.org/openssl/extended-releases/commit/dfbaf161d8dafc1132dd88cd48ad990ed9b4c8ba",
+            "https://lists.debian.org/debian-lts-announce/2025/10/msg00001.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-9230",
+            "https://openssl-library.org/news/secadv/20250930.txt",
+            "https://ubuntu.com/security/notices/USN-7786-1",
+            "https://www.cve.org/CVERecord?id=CVE-2025-9230"
+          ],
+          "PublishedDate": "2025-09-30T14:15:41.05Z",
+          "LastModifiedDate": "2025-11-04T22:16:45.36Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-9231",
+          "PkgID": "libcrypto3@3.5.0-r0",
+          "PkgName": "libcrypto3",
+          "PkgIdentifier": {
+            "PURL": "pkg:apk/alpine/libcrypto3@3.5.0-r0?arch=aarch64\u0026distro=3.22.0",
+            "UID": "87ba5285732934d5"
+          },
+          "InstalledVersion": "3.5.0-r0",
+          "FixedVersion": "3.5.4-r0",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:d69d4d41cfe2ee680d6972795e2a1eb9e4dc4ec3b3c5e0797c9ab43bb3726fa7",
+            "DiffID": "sha256:1231a673589ac9e2f8a98ed916d1fa8301b36a44dd14fc40eba5a05905da69f1"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-9231",
+          "DataSource": {
+            "ID": "alpine",
+            "Name": "Alpine Secdb",
+            "URL": "https://secdb.alpinelinux.org/"
+          },
+          "Title": "openssl: Timing side-channel in SM2 algorithm on 64 bit ARM",
+          "Description": "Issue summary: A timing side-channel which could potentially allow remote\nrecovery of the private key exists in the SM2 algorithm implementation on 64 bit\nARM platforms.\n\nImpact summary: A timing side-channel in SM2 signature computations on 64 bit\nARM platforms could allow recovering the private key by an attacker..\n\nWhile remote key recovery over a network was not attempted by the reporter,\ntiming measurements revealed a timing signal which may allow such an attack.\n\nOpenSSL does not directly support certificates with SM2 keys in TLS, and so\nthis CVE is not relevant in most TLS contexts.  However, given that it is\npossible to add support for such certificates via a custom provider, coupled\nwith the fact that in such a custom provider context the private key may be\nrecoverable via remote timing measurements, we consider this to be a Moderate\nseverity issue.\n\nThe FIPS modules in 3.5, 3.4, 3.3, 3.2, 3.1 and 3.0 are not affected by this\nissue, as SM2 is not an approved algorithm.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-385"
+          ],
+          "VendorSeverity": {
+            "amazon": 2,
+            "redhat": 2,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "V3Score": 5.9
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/09/30/5",
+            "https://access.redhat.com/security/cve/CVE-2025-9231",
+            "https://github.com/openssl/openssl/commit/567f64386e43683888212226824b6a179885a0fe",
+            "https://github.com/openssl/openssl/commit/cba616c26ac8e7b37de5e77762e505ba5ca51698",
+            "https://github.com/openssl/openssl/commit/eed5adc9f969d77c94f213767acbb41ff923b6f4",
+            "https://github.com/openssl/openssl/commit/fc47a2ec078912b3e914fab5734535e76c4820c2",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-9231",
+            "https://openssl-library.org/news/secadv/20250930.txt",
+            "https://ubuntu.com/security/notices/USN-7786-1",
+            "https://www.cve.org/CVERecord?id=CVE-2025-9231"
+          ],
+          "PublishedDate": "2025-09-30T14:15:41.19Z",
+          "LastModifiedDate": "2025-11-04T22:16:45.49Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-9232",
+          "PkgID": "libcrypto3@3.5.0-r0",
+          "PkgName": "libcrypto3",
+          "PkgIdentifier": {
+            "PURL": "pkg:apk/alpine/libcrypto3@3.5.0-r0?arch=aarch64\u0026distro=3.22.0",
+            "UID": "87ba5285732934d5"
+          },
+          "InstalledVersion": "3.5.0-r0",
+          "FixedVersion": "3.5.4-r0",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:d69d4d41cfe2ee680d6972795e2a1eb9e4dc4ec3b3c5e0797c9ab43bb3726fa7",
+            "DiffID": "sha256:1231a673589ac9e2f8a98ed916d1fa8301b36a44dd14fc40eba5a05905da69f1"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-9232",
+          "DataSource": {
+            "ID": "alpine",
+            "Name": "Alpine Secdb",
+            "URL": "https://secdb.alpinelinux.org/"
+          },
+          "Title": "openssl: Out-of-bounds read in HTTP client no_proxy handling",
+          "Description": "Issue summary: An application using the OpenSSL HTTP client API functions may\ntrigger an out-of-bounds read if the 'no_proxy' environment variable is set and\nthe host portion of the authority component of the HTTP URL is an IPv6 address.\n\nImpact summary: An out-of-bounds read can trigger a crash which leads to\nDenial of Service for an application.\n\nThe OpenSSL HTTP client API functions can be used directly by applications\nbut they are also used by the OCSP client functions and CMP (Certificate\nManagement Protocol) client implementation in OpenSSL. However the URLs used\nby these implementations are unlikely to be controlled by an attacker.\n\nIn this vulnerable code the out of bounds read can only trigger a crash.\nFurthermore the vulnerability requires an attacker-controlled URL to be\npassed from an application to the OpenSSL function and the user has to have\na 'no_proxy' environment variable set. For the aforementioned reasons the\nissue was assessed as Low severity.\n\nThe vulnerable code was introduced in the following patch releases:\n3.0.16, 3.1.8, 3.2.4, 3.3.3, 3.4.0 and 3.5.0.\n\nThe FIPS modules in 3.5, 3.4, 3.3, 3.2, 3.1 and 3.0 are not affected by this\nissue, as the HTTP client implementation is outside the OpenSSL FIPS module\nboundary.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-125"
+          ],
+          "VendorSeverity": {
+            "azure": 2,
+            "photon": 2,
+            "redhat": 1,
+            "ubuntu": 1
+          },
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:L",
+              "V3Score": 3.1
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/09/30/5",
+            "https://access.redhat.com/security/cve/CVE-2025-9232",
+            "https://github.com/openssl/openssl/commit/2b4ec20e47959170422922eaff25346d362dcb35",
+            "https://github.com/openssl/openssl/commit/654dc11d23468a74fc8ea4672b702dd3feb7be4b",
+            "https://github.com/openssl/openssl/commit/7cf21a30513c9e43c4bc3836c237cf086e194af3",
+            "https://github.com/openssl/openssl/commit/89e790ac431125a4849992858490bed6b225eadf",
+            "https://github.com/openssl/openssl/commit/bbf38c034cdabd0a13330abcc4855c866f53d2e0",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-9232",
+            "https://openssl-library.org/news/secadv/20250930.txt",
+            "https://ubuntu.com/security/notices/USN-7786-1",
+            "https://www.cve.org/CVERecord?id=CVE-2025-9232"
+          ],
+          "PublishedDate": "2025-09-30T14:15:41.313Z",
+          "LastModifiedDate": "2025-11-04T22:16:45.63Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-4575",
+          "PkgID": "libcrypto3@3.5.0-r0",
+          "PkgName": "libcrypto3",
+          "PkgIdentifier": {
+            "PURL": "pkg:apk/alpine/libcrypto3@3.5.0-r0?arch=aarch64\u0026distro=3.22.0",
+            "UID": "87ba5285732934d5"
+          },
+          "InstalledVersion": "3.5.0-r0",
+          "FixedVersion": "3.5.1-r0",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:d69d4d41cfe2ee680d6972795e2a1eb9e4dc4ec3b3c5e0797c9ab43bb3726fa7",
+            "DiffID": "sha256:1231a673589ac9e2f8a98ed916d1fa8301b36a44dd14fc40eba5a05905da69f1"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-4575",
+          "DataSource": {
+            "ID": "alpine",
+            "Name": "Alpine Secdb",
+            "URL": "https://secdb.alpinelinux.org/"
+          },
+          "Title": "Issue summary: Use of -addreject option with the openssl x509 applicat ...",
+          "Description": "Issue summary: Use of -addreject option with the openssl x509 application adds\na trusted use instead of a rejected use for a certificate.\n\nImpact summary: If a user intends to make a trusted certificate rejected for\na particular use it will be instead marked as trusted for that use.\n\nA copy \u0026 paste error during minor refactoring of the code introduced this\nissue in the OpenSSL 3.5 version. If, for example, a trusted CA certificate\nshould be trusted only for the purpose of authenticating TLS servers but not\nfor CMS signature verification and the CMS signature verification is intended\nto be marked as rejected with the -addreject option, the resulting CA\ncertificate will be trusted for CMS signature verification purpose instead.\n\nOnly users which use the trusted certificate format who use the openssl x509\ncommand line application to add rejected uses are affected by this issue.\nThe issues affecting only the command line application are considered to\nbe Low severity.\n\nThe FIPS modules in 3.5, 3.4, 3.3, 3.2, 3.1 and 3.0 are not affected by this\nissue.\n\nOpenSSL 3.4, 3.3, 3.2, 3.1, 3.0, 1.1.1 and 1.0.2 are also not affected by this\nissue.",
+          "Severity": "UNKNOWN",
+          "CweIDs": [
+            "CWE-295"
+          ],
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/05/22/1",
+            "https://github.com/openssl/openssl/commit/e96d22446e633d117e6c9904cb15b4693e956eaa",
+            "https://openssl-library.org/news/secadv/20250522.txt"
+          ],
+          "PublishedDate": "2025-05-22T14:16:07.63Z",
+          "LastModifiedDate": "2025-10-23T14:51:30.377Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-9230",
+          "PkgID": "libssl3@3.5.0-r0",
+          "PkgName": "libssl3",
+          "PkgIdentifier": {
+            "PURL": "pkg:apk/alpine/libssl3@3.5.0-r0?arch=aarch64\u0026distro=3.22.0",
+            "UID": "6a745fb30225df3f"
+          },
+          "InstalledVersion": "3.5.0-r0",
+          "FixedVersion": "3.5.4-r0",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:d69d4d41cfe2ee680d6972795e2a1eb9e4dc4ec3b3c5e0797c9ab43bb3726fa7",
+            "DiffID": "sha256:1231a673589ac9e2f8a98ed916d1fa8301b36a44dd14fc40eba5a05905da69f1"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-9230",
+          "DataSource": {
+            "ID": "alpine",
+            "Name": "Alpine Secdb",
+            "URL": "https://secdb.alpinelinux.org/"
+          },
+          "Title": "openssl: Out-of-bounds read \u0026 write in RFC 3211 KEK Unwrap",
+          "Description": "Issue summary: An application trying to decrypt CMS messages encrypted using\npassword based encryption can trigger an out-of-bounds read and write.\n\nImpact summary: This out-of-bounds read may trigger a crash which leads to\nDenial of Service for an application. The out-of-bounds write can cause\na memory corruption which can have various consequences including\na Denial of Service or Execution of attacker-supplied code.\n\nAlthough the consequences of a successful exploit of this vulnerability\ncould be severe, the probability that the attacker would be able to\nperform it is low. Besides, password based (PWRI) encryption support in CMS\nmessages is very rarely used. For that reason the issue was assessed as\nModerate severity according to our Security Policy.\n\nThe FIPS modules in 3.5, 3.4, 3.3, 3.2, 3.1 and 3.0 are not affected by this\nissue, as the CMS implementation is outside the OpenSSL FIPS module\nboundary.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-125",
+            "CWE-787"
+          ],
+          "VendorSeverity": {
+            "amazon": 2,
+            "azure": 3,
+            "photon": 3,
+            "redhat": 2,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "V3Score": 5.6
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/09/30/5",
+            "https://access.redhat.com/security/cve/CVE-2025-9230",
+            "https://github.com/openssl/openssl/commit/5965ea5dd6960f36d8b7f74f8eac67a8eb8f2b45",
+            "https://github.com/openssl/openssl/commit/9e91358f365dee6c446dcdcdb01c04d2743fd280",
+            "https://github.com/openssl/openssl/commit/a79c4ce559c6a3a8fd4109e9f33c1185d5bf2def",
+            "https://github.com/openssl/openssl/commit/b5282d677551afda7d20e9c00e09561b547b2dfd",
+            "https://github.com/openssl/openssl/commit/bae259a211ada6315dc50900686daaaaaa55f482",
+            "https://github.openssl.org/openssl/extended-releases/commit/c2b96348bfa662f25f4fabf81958ae822063dae3",
+            "https://github.openssl.org/openssl/extended-releases/commit/dfbaf161d8dafc1132dd88cd48ad990ed9b4c8ba",
+            "https://lists.debian.org/debian-lts-announce/2025/10/msg00001.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-9230",
+            "https://openssl-library.org/news/secadv/20250930.txt",
+            "https://ubuntu.com/security/notices/USN-7786-1",
+            "https://www.cve.org/CVERecord?id=CVE-2025-9230"
+          ],
+          "PublishedDate": "2025-09-30T14:15:41.05Z",
+          "LastModifiedDate": "2025-11-04T22:16:45.36Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-9231",
+          "PkgID": "libssl3@3.5.0-r0",
+          "PkgName": "libssl3",
+          "PkgIdentifier": {
+            "PURL": "pkg:apk/alpine/libssl3@3.5.0-r0?arch=aarch64\u0026distro=3.22.0",
+            "UID": "6a745fb30225df3f"
+          },
+          "InstalledVersion": "3.5.0-r0",
+          "FixedVersion": "3.5.4-r0",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:d69d4d41cfe2ee680d6972795e2a1eb9e4dc4ec3b3c5e0797c9ab43bb3726fa7",
+            "DiffID": "sha256:1231a673589ac9e2f8a98ed916d1fa8301b36a44dd14fc40eba5a05905da69f1"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-9231",
+          "DataSource": {
+            "ID": "alpine",
+            "Name": "Alpine Secdb",
+            "URL": "https://secdb.alpinelinux.org/"
+          },
+          "Title": "openssl: Timing side-channel in SM2 algorithm on 64 bit ARM",
+          "Description": "Issue summary: A timing side-channel which could potentially allow remote\nrecovery of the private key exists in the SM2 algorithm implementation on 64 bit\nARM platforms.\n\nImpact summary: A timing side-channel in SM2 signature computations on 64 bit\nARM platforms could allow recovering the private key by an attacker..\n\nWhile remote key recovery over a network was not attempted by the reporter,\ntiming measurements revealed a timing signal which may allow such an attack.\n\nOpenSSL does not directly support certificates with SM2 keys in TLS, and so\nthis CVE is not relevant in most TLS contexts.  However, given that it is\npossible to add support for such certificates via a custom provider, coupled\nwith the fact that in such a custom provider context the private key may be\nrecoverable via remote timing measurements, we consider this to be a Moderate\nseverity issue.\n\nThe FIPS modules in 3.5, 3.4, 3.3, 3.2, 3.1 and 3.0 are not affected by this\nissue, as SM2 is not an approved algorithm.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-385"
+          ],
+          "VendorSeverity": {
+            "amazon": 2,
+            "redhat": 2,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "V3Score": 5.9
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/09/30/5",
+            "https://access.redhat.com/security/cve/CVE-2025-9231",
+            "https://github.com/openssl/openssl/commit/567f64386e43683888212226824b6a179885a0fe",
+            "https://github.com/openssl/openssl/commit/cba616c26ac8e7b37de5e77762e505ba5ca51698",
+            "https://github.com/openssl/openssl/commit/eed5adc9f969d77c94f213767acbb41ff923b6f4",
+            "https://github.com/openssl/openssl/commit/fc47a2ec078912b3e914fab5734535e76c4820c2",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-9231",
+            "https://openssl-library.org/news/secadv/20250930.txt",
+            "https://ubuntu.com/security/notices/USN-7786-1",
+            "https://www.cve.org/CVERecord?id=CVE-2025-9231"
+          ],
+          "PublishedDate": "2025-09-30T14:15:41.19Z",
+          "LastModifiedDate": "2025-11-04T22:16:45.49Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-9232",
+          "PkgID": "libssl3@3.5.0-r0",
+          "PkgName": "libssl3",
+          "PkgIdentifier": {
+            "PURL": "pkg:apk/alpine/libssl3@3.5.0-r0?arch=aarch64\u0026distro=3.22.0",
+            "UID": "6a745fb30225df3f"
+          },
+          "InstalledVersion": "3.5.0-r0",
+          "FixedVersion": "3.5.4-r0",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:d69d4d41cfe2ee680d6972795e2a1eb9e4dc4ec3b3c5e0797c9ab43bb3726fa7",
+            "DiffID": "sha256:1231a673589ac9e2f8a98ed916d1fa8301b36a44dd14fc40eba5a05905da69f1"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-9232",
+          "DataSource": {
+            "ID": "alpine",
+            "Name": "Alpine Secdb",
+            "URL": "https://secdb.alpinelinux.org/"
+          },
+          "Title": "openssl: Out-of-bounds read in HTTP client no_proxy handling",
+          "Description": "Issue summary: An application using the OpenSSL HTTP client API functions may\ntrigger an out-of-bounds read if the 'no_proxy' environment variable is set and\nthe host portion of the authority component of the HTTP URL is an IPv6 address.\n\nImpact summary: An out-of-bounds read can trigger a crash which leads to\nDenial of Service for an application.\n\nThe OpenSSL HTTP client API functions can be used directly by applications\nbut they are also used by the OCSP client functions and CMP (Certificate\nManagement Protocol) client implementation in OpenSSL. However the URLs used\nby these implementations are unlikely to be controlled by an attacker.\n\nIn this vulnerable code the out of bounds read can only trigger a crash.\nFurthermore the vulnerability requires an attacker-controlled URL to be\npassed from an application to the OpenSSL function and the user has to have\na 'no_proxy' environment variable set. For the aforementioned reasons the\nissue was assessed as Low severity.\n\nThe vulnerable code was introduced in the following patch releases:\n3.0.16, 3.1.8, 3.2.4, 3.3.3, 3.4.0 and 3.5.0.\n\nThe FIPS modules in 3.5, 3.4, 3.3, 3.2, 3.1 and 3.0 are not affected by this\nissue, as the HTTP client implementation is outside the OpenSSL FIPS module\nboundary.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-125"
+          ],
+          "VendorSeverity": {
+            "azure": 2,
+            "photon": 2,
+            "redhat": 1,
+            "ubuntu": 1
+          },
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:L",
+              "V3Score": 3.1
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/09/30/5",
+            "https://access.redhat.com/security/cve/CVE-2025-9232",
+            "https://github.com/openssl/openssl/commit/2b4ec20e47959170422922eaff25346d362dcb35",
+            "https://github.com/openssl/openssl/commit/654dc11d23468a74fc8ea4672b702dd3feb7be4b",
+            "https://github.com/openssl/openssl/commit/7cf21a30513c9e43c4bc3836c237cf086e194af3",
+            "https://github.com/openssl/openssl/commit/89e790ac431125a4849992858490bed6b225eadf",
+            "https://github.com/openssl/openssl/commit/bbf38c034cdabd0a13330abcc4855c866f53d2e0",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-9232",
+            "https://openssl-library.org/news/secadv/20250930.txt",
+            "https://ubuntu.com/security/notices/USN-7786-1",
+            "https://www.cve.org/CVERecord?id=CVE-2025-9232"
+          ],
+          "PublishedDate": "2025-09-30T14:15:41.313Z",
+          "LastModifiedDate": "2025-11-04T22:16:45.63Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-4575",
+          "PkgID": "libssl3@3.5.0-r0",
+          "PkgName": "libssl3",
+          "PkgIdentifier": {
+            "PURL": "pkg:apk/alpine/libssl3@3.5.0-r0?arch=aarch64\u0026distro=3.22.0",
+            "UID": "6a745fb30225df3f"
+          },
+          "InstalledVersion": "3.5.0-r0",
+          "FixedVersion": "3.5.1-r0",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:d69d4d41cfe2ee680d6972795e2a1eb9e4dc4ec3b3c5e0797c9ab43bb3726fa7",
+            "DiffID": "sha256:1231a673589ac9e2f8a98ed916d1fa8301b36a44dd14fc40eba5a05905da69f1"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-4575",
+          "DataSource": {
+            "ID": "alpine",
+            "Name": "Alpine Secdb",
+            "URL": "https://secdb.alpinelinux.org/"
+          },
+          "Title": "Issue summary: Use of -addreject option with the openssl x509 applicat ...",
+          "Description": "Issue summary: Use of -addreject option with the openssl x509 application adds\na trusted use instead of a rejected use for a certificate.\n\nImpact summary: If a user intends to make a trusted certificate rejected for\na particular use it will be instead marked as trusted for that use.\n\nA copy \u0026 paste error during minor refactoring of the code introduced this\nissue in the OpenSSL 3.5 version. If, for example, a trusted CA certificate\nshould be trusted only for the purpose of authenticating TLS servers but not\nfor CMS signature verification and the CMS signature verification is intended\nto be marked as rejected with the -addreject option, the resulting CA\ncertificate will be trusted for CMS signature verification purpose instead.\n\nOnly users which use the trusted certificate format who use the openssl x509\ncommand line application to add rejected uses are affected by this issue.\nThe issues affecting only the command line application are considered to\nbe Low severity.\n\nThe FIPS modules in 3.5, 3.4, 3.3, 3.2, 3.1 and 3.0 are not affected by this\nissue.\n\nOpenSSL 3.4, 3.3, 3.2, 3.1, 3.0, 1.1.1 and 1.0.2 are also not affected by this\nissue.",
+          "Severity": "UNKNOWN",
+          "CweIDs": [
+            "CWE-295"
+          ],
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/05/22/1",
+            "https://github.com/openssl/openssl/commit/e96d22446e633d117e6c9904cb15b4693e956eaa",
+            "https://openssl-library.org/news/secadv/20250522.txt"
+          ],
+          "PublishedDate": "2025-05-22T14:16:07.63Z",
+          "LastModifiedDate": "2025-10-23T14:51:30.377Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2024-58251",
+          "PkgID": "ssl_client@1.37.0-r18",
+          "PkgName": "ssl_client",
+          "PkgIdentifier": {
+            "PURL": "pkg:apk/alpine/ssl_client@1.37.0-r18?arch=aarch64\u0026distro=3.22.0",
+            "UID": "687a783ae4732911"
+          },
+          "InstalledVersion": "1.37.0-r18",
+          "FixedVersion": "1.37.0-r20",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:d69d4d41cfe2ee680d6972795e2a1eb9e4dc4ec3b3c5e0797c9ab43bb3726fa7",
+            "DiffID": "sha256:1231a673589ac9e2f8a98ed916d1fa8301b36a44dd14fc40eba5a05905da69f1"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-58251",
+          "DataSource": {
+            "ID": "alpine",
+            "Name": "Alpine Secdb",
+            "URL": "https://secdb.alpinelinux.org/"
+          },
+          "Title": "In netstat in BusyBox through 1.37.0, local users can launch of networ ...",
+          "Description": "In netstat in BusyBox through 1.37.0, local users can launch of network application with an argv[0] containing an ANSI terminal escape sequence, leading to a denial of service (terminal locked up) when netstat is used by a victim.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-150"
+          ],
+          "VendorSeverity": {
+            "ubuntu": 2
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/04/23/6",
+            "https://bugs.busybox.net/show_bug.cgi?id=15922",
+            "https://www.busybox.net",
+            "https://www.busybox.net/downloads/",
+            "https://www.cve.org/CVERecord?id=CVE-2024-58251"
+          ],
+          "PublishedDate": "2025-04-23T18:16:03.057Z",
+          "LastModifiedDate": "2025-04-29T13:52:47.47Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-46394",
+          "PkgID": "ssl_client@1.37.0-r18",
+          "PkgName": "ssl_client",
+          "PkgIdentifier": {
+            "PURL": "pkg:apk/alpine/ssl_client@1.37.0-r18?arch=aarch64\u0026distro=3.22.0",
+            "UID": "687a783ae4732911"
+          },
+          "InstalledVersion": "1.37.0-r18",
+          "FixedVersion": "1.37.0-r20",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:d69d4d41cfe2ee680d6972795e2a1eb9e4dc4ec3b3c5e0797c9ab43bb3726fa7",
+            "DiffID": "sha256:1231a673589ac9e2f8a98ed916d1fa8301b36a44dd14fc40eba5a05905da69f1"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-46394",
+          "DataSource": {
+            "ID": "alpine",
+            "Name": "Alpine Secdb",
+            "URL": "https://secdb.alpinelinux.org/"
+          },
+          "Title": "In tar in BusyBox through 1.37.0, a TAR archive can have filenames hid ...",
+          "Description": "In tar in BusyBox through 1.37.0, a TAR archive can have filenames hidden from a listing through the use of terminal escape sequences.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-451"
+          ],
+          "VendorSeverity": {
+            "nvd": 1,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+              "V3Score": 3.3
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/04/23/5",
+            "http://www.openwall.com/lists/oss-security/2025/04/24/3",
+            "https://bugs.busybox.net/show_bug.cgi?id=16018",
+            "https://lists.busybox.net/pipermail/busybox/2024-July/090806.html",
+            "https://lists.busybox.net/pipermail/busybox/2024-July/090814.html",
+            "https://www.busybox.net",
+            "https://www.busybox.net/downloads/",
+            "https://www.cve.org/CVERecord?id=CVE-2025-46394",
+            "https://www.openwall.com/lists/oss-security/2025/04/23/1"
+          ],
+          "PublishedDate": "2025-04-23T16:15:48.713Z",
+          "LastModifiedDate": "2025-09-24T14:38:22.127Z"
+        }
+      ]
+    },
+    {
+      "Target": "app/main",
+      "Class": "lang-pkgs",
+      "Type": "gobinary",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2025-47914",
+          "PkgID": "golang.org/x/crypto@v0.40.0",
+          "PkgName": "golang.org/x/crypto",
+          "PkgIdentifier": {
+            "PURL": "pkg:golang/golang.org/x/crypto@v0.40.0",
+            "UID": "aac8995f9c318671"
+          },
+          "InstalledVersion": "v0.40.0",
+          "FixedVersion": "0.45.0",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:8499c67e3163d984be4a831b28d39e0a48cb025e02da368d6e38bc547f1a6d51",
+            "DiffID": "sha256:00d367f5770aafef77ef670d8bb49772911222166a76c3b710a4405005674bc2"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-47914",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Go",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago"
+          },
+          "Title": "SSH Agent servers do not validate the size of messages when processing ...",
+          "Description": "SSH Agent servers do not validate the size of messages when processing new identity requests, which may cause the program to panic if the message is malformed due to an out of bounds read.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-125"
+          ],
+          "VendorSeverity": {
+            "ghsa": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "https://go.dev/cl/721960",
+            "https://go.dev/issue/76364",
+            "https://go.googlesource.com/crypto",
+            "https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-47914",
+            "https://pkg.go.dev/vuln/GO-2025-4135"
+          ],
+          "PublishedDate": "2025-11-19T21:15:50.517Z",
+          "LastModifiedDate": "2025-11-21T15:13:59.083Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-58181",
+          "PkgID": "golang.org/x/crypto@v0.40.0",
+          "PkgName": "golang.org/x/crypto",
+          "PkgIdentifier": {
+            "PURL": "pkg:golang/golang.org/x/crypto@v0.40.0",
+            "UID": "aac8995f9c318671"
+          },
+          "InstalledVersion": "v0.40.0",
+          "FixedVersion": "0.45.0",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:8499c67e3163d984be4a831b28d39e0a48cb025e02da368d6e38bc547f1a6d51",
+            "DiffID": "sha256:00d367f5770aafef77ef670d8bb49772911222166a76c3b710a4405005674bc2"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-58181",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Go",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Ago"
+          },
+          "Title": "SSH servers parsing GSSAPI authentication requests do not validate the ...",
+          "Description": "SSH servers parsing GSSAPI authentication requests do not validate the number of mechanisms specified in the request, allowing an attacker to cause unbounded memory consumption.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-770"
+          ],
+          "VendorSeverity": {
+            "ghsa": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "https://go.dev/cl/721961",
+            "https://go.dev/issue/76363",
+            "https://groups.google.com/g/golang-announce/c/w-oX3UxNcZA",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-58181",
+            "https://pkg.go.dev/vuln/GO-2025-4134"
+          ],
+          "PublishedDate": "2025-11-19T21:15:50.85Z",
+          "LastModifiedDate": "2025-11-21T15:13:59.083Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-47907",
+          "PkgID": "stdlib@v1.24.4",
+          "PkgName": "stdlib",
+          "PkgIdentifier": {
+            "PURL": "pkg:golang/stdlib@v1.24.4",
+            "UID": "44dcb5a0aeea3101"
+          },
+          "InstalledVersion": "v1.24.4",
+          "FixedVersion": "1.23.12, 1.24.6",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:8499c67e3163d984be4a831b28d39e0a48cb025e02da368d6e38bc547f1a6d51",
+            "DiffID": "sha256:00d367f5770aafef77ef670d8bb49772911222166a76c3b710a4405005674bc2"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-47907",
+          "DataSource": {
+            "ID": "govulndb",
+            "Name": "The Go Vulnerability Database",
+            "URL": "https://pkg.go.dev/vuln/"
+          },
+          "Title": "database/sql: Postgres Scan Race Condition",
+          "Description": "Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel. This can result in a race condition that may overwrite the expected results with those of another query, causing the call to Scan to return either unexpected results from the other query or an error.",
+          "Severity": "HIGH",
+          "VendorSeverity": {
+            "amazon": 3,
+            "azure": 3,
+            "bitnami": 3,
+            "cbl-mariner": 3,
+            "redhat": 2
+          },
+          "CVSS": {
+            "bitnami": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L",
+              "V3Score": 7
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L",
+              "V3Score": 7
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/08/06/1",
+            "https://access.redhat.com/security/cve/CVE-2025-47907",
+            "https://go.dev/cl/693735",
+            "https://go.dev/issue/74831",
+            "https://groups.google.com/g/golang-announce/c/x5MKroML2yM",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-47907",
+            "https://pkg.go.dev/vuln/GO-2025-3849",
+            "https://www.cve.org/CVERecord?id=CVE-2025-47907"
+          ],
+          "PublishedDate": "2025-08-07T16:15:30.357Z",
+          "LastModifiedDate": "2025-11-04T22:16:16.347Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-58183",
+          "PkgID": "stdlib@v1.24.4",
+          "PkgName": "stdlib",
+          "PkgIdentifier": {
+            "PURL": "pkg:golang/stdlib@v1.24.4",
+            "UID": "44dcb5a0aeea3101"
+          },
+          "InstalledVersion": "v1.24.4",
+          "FixedVersion": "1.24.8, 1.25.2",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:8499c67e3163d984be4a831b28d39e0a48cb025e02da368d6e38bc547f1a6d51",
+            "DiffID": "sha256:00d367f5770aafef77ef670d8bb49772911222166a76c3b710a4405005674bc2"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-58183",
+          "DataSource": {
+            "ID": "govulndb",
+            "Name": "The Go Vulnerability Database",
+            "URL": "https://pkg.go.dev/vuln/"
+          },
+          "Title": "golang: archive/tar: Unbounded allocation when parsing GNU sparse map",
+          "Description": "tar.Reader does not set a maximum size on the number of sparse region data blocks in GNU tar pax 1.0 sparse files. A maliciously-crafted archive containing a large number of sparse regions can cause a Reader to read an unbounded amount of data from the archive into memory. When reading from a compressed source, a small compressed input can result in large allocations.",
+          "Severity": "HIGH",
+          "VendorSeverity": {
+            "alma": 2,
+            "amazon": 3,
+            "bitnami": 2,
+            "redhat": 2
+          },
+          "CVSS": {
+            "bitnami": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+              "V3Score": 4.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/10/08/1",
+            "https://access.redhat.com/errata/RHSA-2025:21815",
+            "https://access.redhat.com/security/cve/CVE-2025-58183",
+            "https://bugzilla.redhat.com/2407258",
+            "https://errata.almalinux.org/9/ALSA-2025-21815.html",
+            "https://go.dev/cl/709861",
+            "https://go.dev/issue/75677",
+            "https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-58183",
+            "https://pkg.go.dev/vuln/GO-2025-4014",
+            "https://www.cve.org/CVERecord?id=CVE-2025-58183"
+          ],
+          "PublishedDate": "2025-10-29T23:16:19.357Z",
+          "LastModifiedDate": "2025-11-04T22:16:33.2Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-58186",
+          "PkgID": "stdlib@v1.24.4",
+          "PkgName": "stdlib",
+          "PkgIdentifier": {
+            "PURL": "pkg:golang/stdlib@v1.24.4",
+            "UID": "44dcb5a0aeea3101"
+          },
+          "InstalledVersion": "v1.24.4",
+          "FixedVersion": "1.24.8, 1.25.2",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:8499c67e3163d984be4a831b28d39e0a48cb025e02da368d6e38bc547f1a6d51",
+            "DiffID": "sha256:00d367f5770aafef77ef670d8bb49772911222166a76c3b710a4405005674bc2"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-58186",
+          "DataSource": {
+            "ID": "govulndb",
+            "Name": "The Go Vulnerability Database",
+            "URL": "https://pkg.go.dev/vuln/"
+          },
+          "Title": "Despite HTTP headers having a default limit of 1MB, the number of cook ...",
+          "Description": "Despite HTTP headers having a default limit of 1MB, the number of cookies that can be parsed does not have a limit. By sending a lot of very small cookies such as \"a=;\", an attacker can make an HTTP server allocate a large amount of structs, causing large memory consumption.",
+          "Severity": "HIGH",
+          "VendorSeverity": {
+            "amazon": 3,
+            "bitnami": 2
+          },
+          "CVSS": {
+            "bitnami": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/10/08/1",
+            "https://go.dev/cl/709855",
+            "https://go.dev/issue/75672",
+            "https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-58186",
+            "https://pkg.go.dev/vuln/GO-2025-4012"
+          ],
+          "PublishedDate": "2025-10-29T23:16:19.547Z",
+          "LastModifiedDate": "2025-11-04T22:16:33.45Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-58187",
+          "PkgID": "stdlib@v1.24.4",
+          "PkgName": "stdlib",
+          "PkgIdentifier": {
+            "PURL": "pkg:golang/stdlib@v1.24.4",
+            "UID": "44dcb5a0aeea3101"
+          },
+          "InstalledVersion": "v1.24.4",
+          "FixedVersion": "1.24.9, 1.25.3",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:8499c67e3163d984be4a831b28d39e0a48cb025e02da368d6e38bc547f1a6d51",
+            "DiffID": "sha256:00d367f5770aafef77ef670d8bb49772911222166a76c3b710a4405005674bc2"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-58187",
+          "DataSource": {
+            "ID": "govulndb",
+            "Name": "The Go Vulnerability Database",
+            "URL": "https://pkg.go.dev/vuln/"
+          },
+          "Title": "Due to the design of the name constraint checking algorithm, the proce ...",
+          "Description": "Due to the design of the name constraint checking algorithm, the processing time of some inputs scale non-linearly with respect to the size of the certificate. This affects programs which validate arbitrary certificate chains.",
+          "Severity": "HIGH",
+          "VendorSeverity": {
+            "amazon": 3,
+            "bitnami": 3
+          },
+          "CVSS": {
+            "bitnami": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/10/08/1",
+            "https://go.dev/cl/709854",
+            "https://go.dev/issue/75681",
+            "https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-58187",
+            "https://pkg.go.dev/vuln/GO-2025-4007"
+          ],
+          "PublishedDate": "2025-10-29T23:16:19.643Z",
+          "LastModifiedDate": "2025-11-20T23:15:52.007Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-58188",
+          "PkgID": "stdlib@v1.24.4",
+          "PkgName": "stdlib",
+          "PkgIdentifier": {
+            "PURL": "pkg:golang/stdlib@v1.24.4",
+            "UID": "44dcb5a0aeea3101"
+          },
+          "InstalledVersion": "v1.24.4",
+          "FixedVersion": "1.24.8, 1.25.2",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:8499c67e3163d984be4a831b28d39e0a48cb025e02da368d6e38bc547f1a6d51",
+            "DiffID": "sha256:00d367f5770aafef77ef670d8bb49772911222166a76c3b710a4405005674bc2"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-58188",
+          "DataSource": {
+            "ID": "govulndb",
+            "Name": "The Go Vulnerability Database",
+            "URL": "https://pkg.go.dev/vuln/"
+          },
+          "Title": "Validating certificate chains which contain DSA public keys can cause  ...",
+          "Description": "Validating certificate chains which contain DSA public keys can cause programs to panic, due to a interface cast that assumes they implement the Equal method. This affects programs which validate arbitrary certificate chains.",
+          "Severity": "HIGH",
+          "VendorSeverity": {
+            "amazon": 3,
+            "bitnami": 3
+          },
+          "CVSS": {
+            "bitnami": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/10/08/1",
+            "https://go.dev/cl/709853",
+            "https://go.dev/issue/75675",
+            "https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-58188",
+            "https://pkg.go.dev/vuln/GO-2025-4013"
+          ],
+          "PublishedDate": "2025-10-29T23:16:19.74Z",
+          "LastModifiedDate": "2025-11-04T22:16:33.74Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-47906",
+          "PkgID": "stdlib@v1.24.4",
+          "PkgName": "stdlib",
+          "PkgIdentifier": {
+            "PURL": "pkg:golang/stdlib@v1.24.4",
+            "UID": "44dcb5a0aeea3101"
+          },
+          "InstalledVersion": "v1.24.4",
+          "FixedVersion": "1.23.12, 1.24.6",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:8499c67e3163d984be4a831b28d39e0a48cb025e02da368d6e38bc547f1a6d51",
+            "DiffID": "sha256:00d367f5770aafef77ef670d8bb49772911222166a76c3b710a4405005674bc2"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-47906",
+          "DataSource": {
+            "ID": "govulndb",
+            "Name": "The Go Vulnerability Database",
+            "URL": "https://pkg.go.dev/vuln/"
+          },
+          "Title": "os/exec: Unexpected paths returned from LookPath in os/exec",
+          "Description": "If the PATH environment variable contains paths which are executables (rather than just directories), passing certain strings to LookPath (\"\", \".\", and \"..\"), can result in the binaries listed in the PATH being unexpectedly returned.",
+          "Severity": "MEDIUM",
+          "VendorSeverity": {
+            "amazon": 3,
+            "azure": 3,
+            "bitnami": 2,
+            "cbl-mariner": 2,
+            "redhat": 2
+          },
+          "CVSS": {
+            "bitnami": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L",
+              "V3Score": 6.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L",
+              "V3Score": 6.5
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/08/06/1",
+            "https://access.redhat.com/security/cve/CVE-2025-47906",
+            "https://go.dev/cl/691775",
+            "https://go.dev/issue/74466",
+            "https://groups.google.com/g/golang-announce/c/x5MKroML2yM",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-47906",
+            "https://pkg.go.dev/vuln/GO-2025-3956",
+            "https://www.cve.org/CVERecord?id=CVE-2025-47906"
+          ],
+          "PublishedDate": "2025-09-18T19:15:37.66Z",
+          "LastModifiedDate": "2025-11-04T22:16:16.207Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-47912",
+          "PkgID": "stdlib@v1.24.4",
+          "PkgName": "stdlib",
+          "PkgIdentifier": {
+            "PURL": "pkg:golang/stdlib@v1.24.4",
+            "UID": "44dcb5a0aeea3101"
+          },
+          "InstalledVersion": "v1.24.4",
+          "FixedVersion": "1.24.8, 1.25.2",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:8499c67e3163d984be4a831b28d39e0a48cb025e02da368d6e38bc547f1a6d51",
+            "DiffID": "sha256:00d367f5770aafef77ef670d8bb49772911222166a76c3b710a4405005674bc2"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-47912",
+          "DataSource": {
+            "ID": "govulndb",
+            "Name": "The Go Vulnerability Database",
+            "URL": "https://pkg.go.dev/vuln/"
+          },
+          "Title": "net/url: Insufficient validation of bracketed IPv6 hostnames in net/url",
+          "Description": "The Parse function permits values other than IPv6 addresses to be included in square brackets within the host component of a URL. RFC 3986 permits IPv6 addresses to be included within the host component, enclosed within square brackets. For example: \"http://[::1]/\". IPv4 addresses and hostnames must not appear within square brackets. Parse did not enforce this requirement.",
+          "Severity": "MEDIUM",
+          "VendorSeverity": {
+            "amazon": 3,
+            "bitnami": 2,
+            "redhat": 2
+          },
+          "CVSS": {
+            "bitnami": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "V3Score": 5.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/10/08/1",
+            "https://access.redhat.com/security/cve/CVE-2025-47912",
+            "https://go.dev/cl/709857",
+            "https://go.dev/issue/75678",
+            "https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-47912",
+            "https://pkg.go.dev/vuln/GO-2025-4010",
+            "https://www.cve.org/CVERecord?id=CVE-2025-47912"
+          ],
+          "PublishedDate": "2025-10-29T23:16:18.187Z",
+          "LastModifiedDate": "2025-11-04T22:16:16.497Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-58185",
+          "PkgID": "stdlib@v1.24.4",
+          "PkgName": "stdlib",
+          "PkgIdentifier": {
+            "PURL": "pkg:golang/stdlib@v1.24.4",
+            "UID": "44dcb5a0aeea3101"
+          },
+          "InstalledVersion": "v1.24.4",
+          "FixedVersion": "1.24.8, 1.25.2",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:8499c67e3163d984be4a831b28d39e0a48cb025e02da368d6e38bc547f1a6d51",
+            "DiffID": "sha256:00d367f5770aafef77ef670d8bb49772911222166a76c3b710a4405005674bc2"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-58185",
+          "DataSource": {
+            "ID": "govulndb",
+            "Name": "The Go Vulnerability Database",
+            "URL": "https://pkg.go.dev/vuln/"
+          },
+          "Title": "encoding/asn1: Parsing DER payload can cause memory exhaustion in encoding/asn1",
+          "Description": "Parsing a maliciously crafted DER payload could allocate large amounts of memory, causing memory exhaustion.",
+          "Severity": "MEDIUM",
+          "VendorSeverity": {
+            "amazon": 3,
+            "bitnami": 2,
+            "redhat": 2
+          },
+          "CVSS": {
+            "bitnami": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/10/08/1",
+            "https://access.redhat.com/security/cve/CVE-2025-58185",
+            "https://github.com/golang/go/commit/8709a41d5ef7321f486a1857f189c3fee20e8edd",
+            "https://go.dev/cl/709856",
+            "https://go.dev/issue/75671",
+            "https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-58185",
+            "https://pkg.go.dev/vuln/GO-2025-4011",
+            "https://www.cve.org/CVERecord?id=CVE-2025-58185"
+          ],
+          "PublishedDate": "2025-10-29T23:16:19.45Z",
+          "LastModifiedDate": "2025-11-04T22:16:33.327Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-58189",
+          "PkgID": "stdlib@v1.24.4",
+          "PkgName": "stdlib",
+          "PkgIdentifier": {
+            "PURL": "pkg:golang/stdlib@v1.24.4",
+            "UID": "44dcb5a0aeea3101"
+          },
+          "InstalledVersion": "v1.24.4",
+          "FixedVersion": "1.24.8, 1.25.2",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:8499c67e3163d984be4a831b28d39e0a48cb025e02da368d6e38bc547f1a6d51",
+            "DiffID": "sha256:00d367f5770aafef77ef670d8bb49772911222166a76c3b710a4405005674bc2"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-58189",
+          "DataSource": {
+            "ID": "govulndb",
+            "Name": "The Go Vulnerability Database",
+            "URL": "https://pkg.go.dev/vuln/"
+          },
+          "Title": "crypto/tls: go crypto/tls ALPN negotiation error contains attacker controlled information",
+          "Description": "When Conn.Handshake fails during ALPN negotiation the error contains attacker controlled information (the ALPN protocols sent by the client) which is not escaped.",
+          "Severity": "MEDIUM",
+          "VendorSeverity": {
+            "amazon": 3,
+            "bitnami": 2,
+            "redhat": 2
+          },
+          "CVSS": {
+            "bitnami": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "V3Score": 5.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/10/08/1",
+            "https://access.redhat.com/security/cve/CVE-2025-58189",
+            "https://go.dev/cl/707776",
+            "https://go.dev/issue/75652",
+            "https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-58189",
+            "https://pkg.go.dev/vuln/GO-2025-4008",
+            "https://www.cve.org/CVERecord?id=CVE-2025-58189"
+          ],
+          "PublishedDate": "2025-10-29T23:16:19.833Z",
+          "LastModifiedDate": "2025-11-04T22:16:33.877Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-61723",
+          "PkgID": "stdlib@v1.24.4",
+          "PkgName": "stdlib",
+          "PkgIdentifier": {
+            "PURL": "pkg:golang/stdlib@v1.24.4",
+            "UID": "44dcb5a0aeea3101"
+          },
+          "InstalledVersion": "v1.24.4",
+          "FixedVersion": "1.24.8, 1.25.2",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:8499c67e3163d984be4a831b28d39e0a48cb025e02da368d6e38bc547f1a6d51",
+            "DiffID": "sha256:00d367f5770aafef77ef670d8bb49772911222166a76c3b710a4405005674bc2"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-61723",
+          "DataSource": {
+            "ID": "govulndb",
+            "Name": "The Go Vulnerability Database",
+            "URL": "https://pkg.go.dev/vuln/"
+          },
+          "Title": "encoding/pem: Quadratic complexity when parsing some invalid inputs in encoding/pem",
+          "Description": "The processing time for parsing some invalid inputs scales non-linearly with respect to the size of the input. This affects programs which parse untrusted PEM inputs.",
+          "Severity": "MEDIUM",
+          "VendorSeverity": {
+            "amazon": 3,
+            "bitnami": 3,
+            "redhat": 2
+          },
+          "CVSS": {
+            "bitnami": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/10/08/1",
+            "https://access.redhat.com/security/cve/CVE-2025-61723",
+            "https://github.com/golang/go/commit/5ce8cd16f3859ec5ac4106ad8ec15d6236f4501b",
+            "https://go.dev/cl/709858",
+            "https://go.dev/issue/75676",
+            "https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-61723",
+            "https://pkg.go.dev/vuln/GO-2025-4009",
+            "https://www.cve.org/CVERecord?id=CVE-2025-61723"
+          ],
+          "PublishedDate": "2025-10-29T23:16:19.927Z",
+          "LastModifiedDate": "2025-11-04T22:16:36.42Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-61724",
+          "PkgID": "stdlib@v1.24.4",
+          "PkgName": "stdlib",
+          "PkgIdentifier": {
+            "PURL": "pkg:golang/stdlib@v1.24.4",
+            "UID": "44dcb5a0aeea3101"
+          },
+          "InstalledVersion": "v1.24.4",
+          "FixedVersion": "1.24.8, 1.25.2",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:8499c67e3163d984be4a831b28d39e0a48cb025e02da368d6e38bc547f1a6d51",
+            "DiffID": "sha256:00d367f5770aafef77ef670d8bb49772911222166a76c3b710a4405005674bc2"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-61724",
+          "DataSource": {
+            "ID": "govulndb",
+            "Name": "The Go Vulnerability Database",
+            "URL": "https://pkg.go.dev/vuln/"
+          },
+          "Title": "net/textproto: Excessive CPU consumption in Reader.ReadResponse in net/textproto",
+          "Description": "The Reader.ReadResponse function constructs a response string through repeated string concatenation of lines. When the number of lines in a response is large, this can cause excessive CPU consumption.",
+          "Severity": "MEDIUM",
+          "VendorSeverity": {
+            "amazon": 3,
+            "bitnami": 2,
+            "redhat": 2
+          },
+          "CVSS": {
+            "bitnami": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/10/08/1",
+            "https://access.redhat.com/security/cve/CVE-2025-61724",
+            "https://go.dev/cl/709859",
+            "https://go.dev/issue/75716",
+            "https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-61724",
+            "https://pkg.go.dev/vuln/GO-2025-4015",
+            "https://www.cve.org/CVERecord?id=CVE-2025-61724"
+          ],
+          "PublishedDate": "2025-10-29T23:16:20.02Z",
+          "LastModifiedDate": "2025-11-04T22:16:36.567Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-61725",
+          "PkgID": "stdlib@v1.24.4",
+          "PkgName": "stdlib",
+          "PkgIdentifier": {
+            "PURL": "pkg:golang/stdlib@v1.24.4",
+            "UID": "44dcb5a0aeea3101"
+          },
+          "InstalledVersion": "v1.24.4",
+          "FixedVersion": "1.24.8, 1.25.2",
+          "Status": "fixed",
+          "Layer": {
+            "Digest": "sha256:8499c67e3163d984be4a831b28d39e0a48cb025e02da368d6e38bc547f1a6d51",
+            "DiffID": "sha256:00d367f5770aafef77ef670d8bb49772911222166a76c3b710a4405005674bc2"
+          },
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-61725",
+          "DataSource": {
+            "ID": "govulndb",
+            "Name": "The Go Vulnerability Database",
+            "URL": "https://pkg.go.dev/vuln/"
+          },
+          "Title": "net/mail: Excessive CPU consumption in ParseAddress in net/mail",
+          "Description": "The ParseAddress function constructeds domain-literal address components through repeated string concatenation. When parsing large domain-literal components, this can cause excessive CPU consumption.",
+          "Severity": "MEDIUM",
+          "VendorSeverity": {
+            "amazon": 3,
+            "bitnami": 3,
+            "redhat": 2
+          },
+          "CVSS": {
+            "bitnami": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/10/08/1",
+            "https://access.redhat.com/security/cve/CVE-2025-61725",
+            "https://go.dev/cl/709860",
+            "https://go.dev/issue/75680",
+            "https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-61725",
+            "https://pkg.go.dev/vuln/GO-2025-4006",
+            "https://www.cve.org/CVERecord?id=CVE-2025-61725"
+          ],
+          "PublishedDate": "2025-10-29T23:16:20.113Z",
+          "LastModifiedDate": "2025-11-04T22:16:36.693Z"
+        }
+      ]
+    }
+  ]
+}
