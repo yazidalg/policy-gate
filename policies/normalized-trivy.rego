@@ -1,15 +1,17 @@
 package trivy.normalized
 
-# Output rule: iterate all vulnerabilities
-output := [v |
+# Output rule: iterate all vulnerabilities and emit ES bulk pairs
+output := [item |
   result := input.Results[_]
   vuln := result.Vulnerabilities[_]
 
-  v := {
-    { "index": {"_index": "container_scanning"} },
+  entry := [
+    {"index": {"_index": "container_scanning"}},
     {
       "Target": result.Target,
       "Vulnerabilities": vuln,
-    }
-  }
+    },
+  ]
+
+  item := entry
 ]
